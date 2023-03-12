@@ -25,7 +25,7 @@ def main(page: ft.Page):
                 ftt,
                 alignment=ft.alignment.center,
                 bgcolor= clrs[i%3],
-                border=ft.border.all(1, ft.colors.AMBER_400),
+                border=ft.border.all(1, ft.colors.BLUE),
                 border_radius=ft.border_radius.all(5),
                 on_click=change,
                 ink=True
