@@ -11,7 +11,7 @@ def main(page: ft.Page):
 
     clrs = [ft.colors.RED, ft.colors.GREEN, ft.colors.BLUE]
 
-    for i in range(3):
+    for i in range(30):
         gv.controls.append(
             ft.Container(
                 ft.Text(f"Item {i}"),
