@@ -86,7 +86,7 @@ class Task(UserControl):
         if index>-1:
             self.display_task.label=self.display_task.label[11:]
         self.display_task.label=("Completed! " if self.completed else "") + self.display_task.label
-        self.display_task.fill_color=flet.colors.RED if self.completed else flet.colors.BLACK
+        self.display_task.fill_color=flet.colors.RED if self.completed else  flet.colors.BLACK
         self.task_status_change(self)
         self.update()
 
