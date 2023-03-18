@@ -26,9 +26,7 @@ class Task(UserControl):
         self.task_delete = task_delete
 
     def build(self):
-        self.display_task = Checkbox(
-            value=False, label=self.task_name, on_change=self.status_changed
-        )
+        self.display_task = Checkbox(value=False, label=self.task_name, on_change=self.status_changed)
         self.edit_name = TextField(expand=1)
 
         self.display_view = Row(
@@ -84,7 +82,12 @@ class Task(UserControl):
 
     def status_changed(self, e):
         self.completed = self.display_task.value
+        index=self.display_task.label.find("Completed! ")
+        if index>-1:
+            self.display_task.label=self.display_task.label[11:]
+        self.display_task.label=("Completed! " if self.completed else "") + self.display_task.label
         self.task_status_change(self)
+        self.update()
 
     def delete_clicked(self, e):
         self.task_delete(self)
