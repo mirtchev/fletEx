@@ -91,7 +91,7 @@ class Task(UserControl):
         self.update()
 
     def delete_clicked(self, e):
-        self.task_delete(self)
+        self.task_delete(self)  #
 
 
 class TodoApp(UserControl):
